@@ -51,4 +51,4 @@ with open("./dataset/FratMessagesDataset.csv", "r") as f:
 
 with open("./dataset/training.jsonl", "w") as f:
     for pair in training_list:
-        f.write(json.dumps(pair) + "\n")
+        f.write(json.dumps({"messages": pair}) + "\n")

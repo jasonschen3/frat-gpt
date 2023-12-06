@@ -1,0 +1,55 @@
+html, body {
+    display: flex;
+    flex-direction: column;
+    color: white;
+
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;    
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    background-color: grey;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.input {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin: 10px;
+    padding: 50px;
+}
+
+button {
+    size: 50px;
+    border-radius: 50%;
+    border: 2px solid black;
+    text-align: center;
+    padding: 10px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    background-color: black;
+}

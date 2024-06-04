@@ -11,45 +11,89 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/frat-gpt/public/main.css" />
+    <link rel="stylesheet" href="/main.css" />
   </head>
   <body>
     <div class="px-4 py-5 my-5">
-      <form class="row g-3" method="post" action="/get">
-        <!--Edit potentially-->
+      <form class="row g-3" method="post" action="/message">
         <div class="col-md-2">
           <label for="frat" class="form-label">Frat</label>
-          <input type="text" class="form-control" id="frat" />
+          <input
+            type="text"
+            class="form-control"
+            id="frat"
+            name="frat"
+            required
+            value="Kappa Sigma"
+          />
         </div>
         <div class="col-md-2">
           <label for="srat" class="form-label">Sorority</label>
-          <input type="text" class="form-control" id="srat" />
+          <input
+            type="text"
+            class="form-control"
+            id="srat"
+            name="srat"
+            required
+            value="Alpha Xi"
+          />
         </div>
         <div class="col-12">
           <label for="occasion" class="form-label">Occasion</label>
-          <input type="text" class="form-control" id="occasion" />
+          <input
+            type="text"
+            class="form-control"
+            id="occasion"
+            name="occasion"
+            required
+            value="Tailgate"
+          />
         </div>
         <div class="col-12">
           <label for="date" class="form-label">Date</label>
           <input
             type="text"
             class="form-control"
-            id="inputAddress2"
+            id="date"
+            name="date"
             placeholder="Tomorrow"
+            required
+            value="Tomorrow"
           />
         </div>
         <div class="col-md-6">
           <label for="time" class="form-label">Time</label>
-          <input type="text" class="form-control" id="time" />
+          <input
+            type="text"
+            class="form-control"
+            id="time"
+            name="time"
+            required
+            value="10pm"
+          />
         </div>
         <div class="col-md-4">
-          <label for="inputState" class="form-label">Location</label>
-          <input type="text" class="form-control" id="location" />
+          <label for="location" class="form-label">Location</label>
+          <input
+            type="text"
+            class="form-control"
+            id="location"
+            name="location"
+            placeholder="House"
+            required
+            value="House"
+          />
         </div>
         <div class="col-12">
-          <button type="submit" class="btn btn-primary">Sign in</button>
+          <button type="submit" class="btn btn-primary">Generate</button>
         </div>
       </form>
+      <div>
+        <% if (locals.generatedMessage) { %> <%= generatedMessage %> <% } else {
+        %>
+        <p>Message here:</p>
+        <% } %>
+      </div>
     </div>
   </body>
 </html>
